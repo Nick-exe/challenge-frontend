@@ -1,0 +1,11 @@
+.wrapper {
+  background-color: adjust-hue($color: #1f191f, $degrees: 15);
+
+  mat-card {
+    padding: 0;
+  }
+}
+
+.login-form {
+  padding: 1rem;
+}
