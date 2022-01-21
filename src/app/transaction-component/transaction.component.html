@@ -1,0 +1,46 @@
+<div class="wrapper" fxFlexFill>
+  <div class="content" gdAreas="header header | side side" gdGap="16px">
+    <div gdArea="header">
+      <mat-toolbar>Transaction Details</mat-toolbar>
+
+      <mat-card class="header-card mat-elevation-z4">
+        <mat-card-title
+          ><p>
+            <mat-icon>email</mat-icon> {{ userDetails?.email }}
+          </p></mat-card-title
+        >
+
+        <mat-card-content>
+          <p mat-body-1>
+            <mat-icon>call</mat-icon>{{ userDetails?.phoneNumber }}
+          </p>
+          <p mat-body-2>
+            <mat-icon>home</mat-icon> {{ userDetails?.countryId }}
+            {{ userDetails?.city }}
+          </p>
+        </mat-card-content>
+      </mat-card>
+    </div>
+    <div
+      gdArea="side"
+      fxLayoutAlign="space-evenly"
+      fxLayout="row"
+      fxLayoutGap="30px"
+      fxLayout.sm="column"
+      *ngFor="let transaction of transactions"
+    >
+      <mat-card fxFlex>
+        <div class="mat-typography">
+          <h1>{{ transaction.product.productName }}</h1>
+          <h3>{{ transaction.product.shortDescription }}</h3>
+          <h3>{{ transaction.price }}</h3>
+        </div>
+      </mat-card>
+      <div fxFlex="20" fxLayoutAlign="center center">
+        <button (click)="cancelTransaction()" mat-raised-button color="warn">
+          Cancel Transaction
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

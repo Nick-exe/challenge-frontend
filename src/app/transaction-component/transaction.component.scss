@@ -1,0 +1,15 @@
+.wrapper {
+  background-color: adjust-hue($color: #1f191f, $degrees: 15);
+
+  mat-toolbar {
+    margin-bottom: 1rem;
+  }
+
+  .content {
+    padding: 3rem;
+  }
+  .mat-icon {
+    vertical-align: middle;
+    margin-right: 1rem;
+  }
+}

@@ -9,12 +9,14 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { AppComponent } from './app.component';
 import { LoginComponent } from './login-component/login.component';
+import { TransactionComponent } from './transaction-component/transaction.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
+    TransactionComponent
   ],
   imports: [
     BrowserModule,
